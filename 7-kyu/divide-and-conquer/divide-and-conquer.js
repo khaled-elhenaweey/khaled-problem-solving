@@ -1,9 +1,4 @@
 function divCon(x){
-  const numberTotal = arrFromat(x,'number');
-  const stringTotal = arrFromat(x,'string')
-  return numberTotal - stringTotal
+ return x.reduce((acc,current) =>  typeof current === 'number' ? acc + current : acc - Number(current),0)
 }
 ​
-function arrFromat(arr,type){
-  return arr.filter(item => typeof item === type).reduce((item,current) => item + Number(current),0);
-}
