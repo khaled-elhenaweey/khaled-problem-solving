@@ -1,15 +1,9 @@
 function arithmetic(a, b, operator){
-  switch (operator){
-      case 'add':
-        return a + b
-      break;
-      case 'subtract':
-        return a - b
-      break;
-      case 'multiply':
-        return a * b
-      break ;
-      case 'divide':
-      return a / b
+  const methodOperator = {
+    add: (a,b)=> a+b,
+    subtract: (a,b)=> a-b,
+    multiply: (a,b)=> a*b,
+    divide: (a,b)=> a/b,
   }
+  return methodOperator[operator](a,b)
 }
